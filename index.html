@@ -12,37 +12,42 @@
 
 <body>
   <header>
-    <nav class="nav_section">
-      <div>
-        <a href="index.html">
-          <span class="logo nav__logo">Arqui<span>vel</span></span>
-        </a>
-      </div>
-      <div class="menu">
-        <a href="index.html" class="navResponsive__logo">
-          <span class="logo nav__logo">Arqui<span>vel</span></span>
-        </a>
-        <ul class="nav__sectionItems">
-          <li><a href="#" class="nav__items">Inicio</a></li>
-          <li><a href="#" class="nav__items">Sobre Nosotros</a></li>
-          <li><a href="#" class="nav__items">Proyectos</a></li>
-          <li><a href="#" class="nav__items">Contacto</a></li>
-        </ul>
-        <a href="#" class="nav__Number">+593 0999 999 999</a> <!--Colocar link de whatsapp-->
-        <button class="nav_button">Cotización</button>
-      </div>
-      <div>
-        <button class="navResponsive__bars" onclick=menuBars()><i class="fa-solid fa-bars"></i></button>
-      </div>
+    <nav>
+      <section class="nav_section container">
+        <div>
+          <a href="index.html">
+            <span class="logo nav__logo">Arqui<span>vel</span></span>
+          </a>
+        </div>
+        <div class="menu">
+          <a href="index.html" class="navResponsive__logo">
+            <span class="logo nav__logo">Arqui<span>vel</span></span>
+          </a>
+          <ul class="nav__sectionItems">
+            <li><a href="#" class="nav__items">Inicio</a></li>
+            <li><a href="#" class="nav__items">Sobre Nosotros</a></li>
+            <li><a href="#" class="nav__items">Proyectos</a></li>
+            <li><a href="#" class="nav__items">Contacto</a></li>
+          </ul>
+          <div class="nav__contact">
+            <a href="#" class="nav__Number">+593 0999 999 999</a> <!--Colocar link de whatsapp-->
+            <button class="nav__button">Cotización</button>
+          </div>
+        </div>
+        <div>
+          <button class="navResponsive__bars" onclick=menuBars()><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </section>
     </nav>
-    <section>
-      <h1>Arquivel: Diseñando tu ambiente ideal</h1>
-      <p>
-        Nos especializamos en el diseño y construcción de espacios personalizados que mejoran la calidad de vida, el
-        bienestar y la conexión con la naturaleza.
-      </p>
-      <button class="nav_button">Cotización</button>
-
+    <section class="header__section">
+      <div class="container">
+        <h1>Arquivel: Diseñando tu ambiente ideal</h1>
+        <p>
+          Nos especializamos en el diseño y construcción de espacios personalizados que mejoran la calidad de vida, el
+          bienestar y la conexión con la naturaleza.
+        </p>
+        <button class="header__button">Ver mas</button>
+      </div>
     </section>
   </header>
   <script src="./js/main.js"></script>

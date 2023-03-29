@@ -19,18 +19,34 @@
 body {
   background-color: #fff;
   font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 header {
+  position: relative;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.45) 50%), url(../img/header-Background.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 nav {
+  position: relative;
   font-size: var(--fontSize-Text);
   color: var(--color-White);
 }
@@ -65,13 +81,18 @@ button {
   padding: 0;
 
   background-color: var(--color-Blue);
-  font-weight: 700;
-  width: 12.5rem;
-  height: 2.625rem;
+  font-weight: 500;
+  width: 175px;
+  height: 40px;
   border-radius: var(--border-radiusGenaral);
 }
 
 /***** Nav *****/
+
+.menu {
+  width: 100%;
+  padding-left: 3%;
+}
 
 .navResponsive__logo {
   display: none;
@@ -79,7 +100,7 @@ button {
 
 .nav_section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 5.5rem;
 }
 
@@ -94,11 +115,14 @@ button {
 }
 
 .nav_section div:nth-child(2) {
-  width: 875px;
+  /*width: 875px;*/
   justify-content: space-between;
   margin-right: 20px;
 }
 
+.nav_section div:nth-child(4) {
+  display: none;
+}
 
 .nav__sectionItems {
   display: flex;
@@ -109,9 +133,42 @@ button {
   padding: 10px;
 }
 
+.nav__button {
+  width: 200px;
+  height: 42px;
+}
+
+.nav__contact {
+  width: 400px;
+  justify-content: space-between;
+}
+
 .navResponsive__bars {
   display: none;
 }
+
+
+/***** Header *****/
+
+.header__section {
+  color: #fff;
+  display: flex;
+  height: calc(100% - 9rem);
+  align-items: center;
+}
+
+.header__section div {
+  padding: 6%;
+}
+
+.header__section p {
+  max-width: 625px;
+  font-size: 20px;
+  line-height: 1.6;
+  padding: 27px 0;
+}
+
+
 
 /*
 
@@ -176,7 +233,7 @@ button {
 
   .nav_section {
     justify-content: space-between;
-    padding: 0 8%;
+    padding: 0 3%;
   }
 
   .nav_section div:nth-child(2) {
@@ -186,4 +243,27 @@ button {
   .nav_section div:first-child {
     margin: 0;
   }
+
+  /***** header *****/
+  h1 {
+    font-size: 32px;
+  }
+
+  .navResponsive__bars {
+    background-color: transparent;
+  }
+
+  .navResponsive__bars i {
+    font-size: 26px;
+  }
+
+  .header__section p {
+    font-size: 16px;
+  }
+
+  .header__section div {
+    text-align: center;
+  }
+
+
 }
