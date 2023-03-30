@@ -87,11 +87,16 @@ button {
   border-radius: var(--border-radiusGenaral);
 }
 
+.navResponsive__bars {
+  background-color: transparent;
+  font-size: 26px;
+}
+
 /***** Nav *****/
 
 .menu {
   width: 100%;
-  padding-left: 3%;
+  padding-left: 2%;
 }
 
 .navResponsive__logo {
@@ -111,13 +116,13 @@ button {
 }
 
 .nav_section div:first-child {
-  margin: 0 10px 0 20px;
+  margin: 0 10px 0 10px;
 }
 
 .nav_section div:nth-child(2) {
   /*width: 875px;*/
   justify-content: space-between;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .nav_section div:nth-child(4) {
@@ -168,61 +173,29 @@ button {
   padding: 27px 0;
 }
 
+@media (max-width: 1135px) {
 
-
-/*
-
-.nav_section div:first-child {
-  justify-content: space-between;
-  width: 625px;
-  gap: 10px;
-  margin-left: 20px;
-}
-
-.nav_section div:nth-child(2) {
-  justify-content: space-between;
-  width: 415px;
-  gap: 5px;
-  margin-right: 20px;
-}
-
-
-.nav_button {
-  width: 12.5rem;
-  height: 2.625rem;
-}
-
-@media (max-width: 1020px) {
-  nav {
-    font-size: 16px;
+  .nav__contact {
+    width: auto;
   }
 
-  .nav_section div:first-child {
-    gap: 7px;
-  }
-
-  .nav__items {
-    padding: 7px;
-  }
-
-  .nav_button {
-    width: 11.5rem;
-    height: 2.625rem;
-  }
-}
-
-@media (max-width: 930px) {
-  .nav__Number {
+  .nav__contact>a {
     display: none;
   }
-}
-*/
 
-@media (max-width: 375px) {
-  .logo {
-    color: var(--color-White);
-    font-size: 1.625rem;
-    font-weight: 500;
+  .header__section div {
+    padding: 5%;
+  }
+
+  .menu {
+    padding-left: 1%;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .nav_section div:nth-child(2) {
+    display: none;
   }
 
   .navResponsive__bars {
@@ -230,31 +203,13 @@ button {
     width: 45px;
     height: 45px;
   }
+}
 
-  .nav_section {
-    justify-content: space-between;
-    padding: 0 3%;
-  }
-
-  .nav_section div:nth-child(2) {
-    display: none;
-  }
-
-  .nav_section div:first-child {
-    margin: 0;
-  }
+@media (max-width: 375px) {
 
   /***** header *****/
   h1 {
     font-size: 32px;
-  }
-
-  .navResponsive__bars {
-    background-color: transparent;
-  }
-
-  .navResponsive__bars i {
-    font-size: 26px;
   }
 
   .header__section p {
