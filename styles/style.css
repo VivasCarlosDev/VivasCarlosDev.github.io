@@ -2,7 +2,7 @@
 
 
 :root {
-  --color-Blue: #2B86D9;
+  --color-Blue: #1c51ffe0;
   --color-White: #fff;
   --color-Black: #232323;
   --fontSize-Text: 18px;
@@ -47,7 +47,7 @@ h2 {
 
 header {
   position: relative;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.45) 50%), url(../img/header-Background.jpg);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.45) 50%), url(../img/header-Background.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -186,10 +186,15 @@ button {
   padding: 27px 0;
 }
 
+.header__textResposive {
+  display: none;
+}
+
 /***** Section Options *****/
 
 .section__options {
   text-align: center;
+  padding-bottom: 50px;
 }
 
 .section__optionsCards {
@@ -267,6 +272,26 @@ button {
   .navResponsive__bars:hover {
     background-color: #ffffff25;
   }
+
+  .header__section div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  .header__section p:nth-child(2) {
+    display: none;
+  }
+
+  .header__textResposive {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+  }
 }
 
 @media (max-width: 375px) {
@@ -276,13 +301,11 @@ button {
     font-size: 32px;
   }
 
-  .header__section p {
-    font-size: 16px;
+  .header__textResposive {
+    font-size: 18px;
   }
 
-  .header__section div {
-    text-align: center;
-  }
+
 
 
 }
