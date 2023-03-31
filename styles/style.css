@@ -4,6 +4,7 @@
 :root {
   --color-Blue: #2B86D9;
   --color-White: #fff;
+  --color-Black: #232323;
   --fontSize-Text: 18px;
   --border-radiusGenaral: 5px;
 }
@@ -12,6 +13,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /***** Default styles *****/
@@ -25,6 +30,12 @@ body {
 h1 {
   font-size: 36px;
   font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  padding: 75px 0 0 0;
 }
 
 .container {
@@ -85,6 +96,7 @@ button {
   width: 175px;
   height: 40px;
   border-radius: var(--border-radiusGenaral);
+  color: var(--color-White);
 }
 
 .navResponsive__bars {
@@ -168,10 +180,58 @@ button {
 
 .header__section p {
   max-width: 625px;
+  font-weight: 400;
   font-size: 20px;
   line-height: 1.6;
   padding: 27px 0;
 }
+
+/***** Section Options *****/
+
+.section__options {
+  text-align: center;
+}
+
+.section__optionsCards {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  max-width: 400px;
+  text-align: center;
+  padding: 45px 3%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  background-color: #DFE2FF;
+}
+
+.card button:hover {
+  background-color: var(--color-Black);
+}
+
+.card:hover .card__svg>g {
+  fill: var(--color-Blue);
+}
+
+.card__svg {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 25px;
+}
+
+.card h3 {
+  margin-bottom: 6px;
+}
+
+.card button {
+  margin-top: 25px;
+}
+
 
 @media (max-width: 1135px) {
 
@@ -202,6 +262,10 @@ button {
     display: inline-block;
     width: 45px;
     height: 45px;
+  }
+
+  .navResponsive__bars:hover {
+    background-color: #ffffff25;
   }
 }
 
