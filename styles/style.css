@@ -5,6 +5,7 @@
   --color-Blue: #1c51ffe0;
   --color-White: #fff;
   --color-Black: #232323;
+  --color-Gray: #DDDDDD;
   --fontSize-Text: 18px;
   --border-radiusGenaral: 5px;
 }
@@ -97,6 +98,7 @@ button {
   height: 40px;
   border-radius: var(--border-radiusGenaral);
   color: var(--color-White);
+  cursor: pointer;
 }
 
 .navResponsive__bars {
@@ -237,6 +239,64 @@ button {
   margin-top: 25px;
 }
 
+/***** About Us *****/
+
+.section__aboutUs {
+  background-color: var(--color-Gray);
+  margin-top: 35px;
+}
+
+.section__aboutUs>div {
+  display: flex;
+  padding: 0 3%;
+  gap: 4%;
+  align-items: center;
+  overflow: visible;
+}
+
+.article__aboutUs>h2 {
+  padding: 0;
+}
+
+.article__aboutUs>p:nth-child(2) {
+  margin: 20px 0;
+}
+
+.article__aboutUs>p:nth-child(3) {
+  font-weight: 600;
+}
+
+.img__aboutUs {
+  position: relative;
+  bottom: 28px;
+  width: 43%;
+  height: 620px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.btn__contact {
+  height: 60px;
+  width: 40%;
+}
+
+.btn__contact>a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-Black);
+  color: var(--color-White);
+}
+
+.btn__contact span {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 10%;
+  padding-right: 75px;
+  height: 100%;
+
+}
 
 @media (max-width: 1135px) {
 
@@ -254,6 +314,11 @@ button {
 
   .menu {
     padding-left: 1%;
+  }
+
+  .section__aboutUs>div {
+    padding: 0 2%;
+    gap: 3%;
   }
 
 }
@@ -275,6 +340,49 @@ button {
 
   .header__section div {
     text-align: center;
+  }
+
+  /***** Section Opctions *****/
+
+  .card:hover {
+    background-color: initial;
+  }
+
+  .section__options {
+    padding-bottom: 0;
+  }
+
+  /***** Section AboutUs *****/
+
+  .section__aboutUs>div {
+    flex-direction: column;
+  }
+
+  .article__aboutUs {
+    text-align: justify;
+    margin-bottom: 25px;
+  }
+
+  .article__aboutUs>h2 {
+    text-align: center;
+    padding: 75px 0 25px 0;
+  }
+
+  .img__aboutUs {
+    bottom: 0px;
+    width: 100%;
+    height: 420px;
+    margin-bottom: 15px;
+  }
+
+  .btn__contact {
+    width: 100%;
+  }
+
+  .btn__contact span {
+    justify-content: left;
+    padding-left: 3%;
+    gap: 15%;
   }
 }
 
