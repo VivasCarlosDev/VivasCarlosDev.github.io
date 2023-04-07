@@ -199,6 +199,14 @@ button {
   display: none;
 }
 
+.header__button {
+  transition: all .4s ease;
+}
+
+.header__button:hover {
+  width: 250px;
+}
+
 /***** Section Options *****/
 
 .section__options {
@@ -315,6 +323,12 @@ button {
 .btn__contact {
   height: 60px;
   width: 40%;
+  transition: all .4s ease;
+  margin-bottom: 55px;
+}
+
+.btn__contact:hover {
+  width: 45%;
 }
 
 .btn__contact>a {
@@ -335,11 +349,19 @@ button {
 
 }
 
+.arrowIcon {
+  width: 15.75px;
+}
+
 /***** Gallery *****/
 
 .section__gallery {
   text-align: center;
   padding-bottom: 140px;
+}
+
+.section__gallery h2 {
+  padding-top: 25px;
 }
 
 .gallery {
@@ -356,6 +378,11 @@ button {
   object-fit: cover;
   opacity: .8;
   transition: .5s ease;
+}
+
+img.imgGalley.handleHover {
+  width: 0px;
+  height: 100%;
 }
 
 .imgGalley.handleHover:hover {
@@ -482,7 +509,11 @@ button {
 
 .section__price button {
   margin-top: 35px;
+  background-color: #1c51ff;
 }
+
+
+
 
 /***** Footer *****/
 
@@ -512,6 +543,9 @@ button {
   width: 25px;
 }
 
+.section__footer .logo>span {
+  color: rgb(96, 120, 255);
+}
 
 
 
@@ -552,9 +586,15 @@ button {
   }
 
   .navResponsive__bars {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 45px;
     height: 45px;
+  }
+
+  .navResponsive__bars svg {
+    width: 22.75px;
   }
 
   .navResponsive__bars:hover {
@@ -608,6 +648,10 @@ button {
     gap: 15%;
   }
 
+  .btn__contact:hover {
+    width: 100%;
+  }
+
   /***** Gallery *****/
 
   .imgGalley.activate {
@@ -618,6 +662,10 @@ button {
 
   .section__gallery {
     padding-bottom: 72px;
+  }
+
+  .section__gallery h2 {
+    padding-top: 5px;
   }
 
   /***** Contact *****/
@@ -700,7 +748,9 @@ button {
     font-weight: 400;
   }
 
-
+  .contact {
+    margin-bottom: 0;
+  }
 
   .section__price p {
     font-size: 28px;
@@ -737,6 +787,12 @@ button {
   .section__price img {
     height: 80%;
     right: -190px;
+  }
+
+  .WebDeveloper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
   }
 
 }
