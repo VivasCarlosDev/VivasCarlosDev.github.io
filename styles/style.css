@@ -64,9 +64,15 @@ header {
 }
 
 nav {
-  position: relative;
+  position: fixed;
+  width: 100%;
   font-size: var(--fontSize-Text);
   color: var(--color-White);
+  z-index: 2;
+}
+
+nav .nav__button {
+  transition: none;
 }
 
 a {
@@ -128,25 +134,22 @@ button {
   display: flex;
   justify-content: space-between;
   height: 5.5rem;
+  align-items: center;
 }
 
 .nav_section div {
   display: flex;
   height: 100%;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav_section div:first-child {
+  align-items: center;
   margin: 0 10px 0 10px;
 }
 
-.nav_section div:nth-child(2) {
-  /*width: 875px;*/
-  justify-content: space-between;
-  margin-right: 10px;
-}
-
-.nav_section div:nth-child(4) {
+.nav_section .div__bars {
   display: none;
 }
 
@@ -185,12 +188,17 @@ button {
 .nav__contact {
   width: 400px;
   justify-content: space-between;
+  margin-right: 10px;
 }
 
-.navResponsive__bars {
+.navResponsive__bars,
+.container__NavResponsive {
   display: none;
 }
 
+.menu .NavResponsive__social {
+  display: none;
+}
 
 /***** Header *****/
 
@@ -199,6 +207,7 @@ button {
   display: flex;
   height: calc(100% - 9rem);
   align-items: center;
+  margin-top: 88px;
 }
 
 .header__section div {
@@ -207,7 +216,7 @@ button {
 }
 
 .header__button {
-  animation: animationHeaderText 2s ease-out;
+  animation: animationHeaderText 1.5s ease-out;
 }
 
 
@@ -259,7 +268,7 @@ button {
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 45px;
+  bottom: 6%;
 }
 
 .scroll-down::before {
@@ -405,7 +414,7 @@ button {
 .btn__contact {
   height: 60px;
   width: 40%;
-  transition: all .4s ease;
+  transition: all .4s ease-out;
   margin-bottom: 55px;
 }
 
@@ -439,7 +448,7 @@ button {
 
 .section__gallery {
   text-align: center;
-  padding-bottom: 140px;
+  padding-bottom: 90px;
 }
 
 .section__gallery h2 {
@@ -477,16 +486,19 @@ img.imgGalley.handleHover {
 /*----- Contact -----*/
 
 .contact {
-  background-color: var(--color-Black);
-  color: var(--color-White);
+
   display: flex;
   width: 100%;
   margin-bottom: 50px;
   overflow: visible;
-  height: 522px;
+  padding-top: 50px;
+
 }
 
 .contact__content {
+  color: var(--color-White);
+  background-color: var(--color-Black);
+  height: 522px;
   display: flex;
   width: 100%;
   max-width: 1600px;
@@ -658,13 +670,94 @@ img.imgGalley.handleHover {
     gap: 13px;
   }
 
-
 }
 
 
 @media (max-width: 900px) {
-  .nav_section div:nth-child(2) {
+
+  /*Responsive nav*/
+
+  .menu {
     display: none;
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--color-White);
+    color: #000000;
+    width: 325px;
+    height: 100vh;
+    top: 0;
+    right: -325px;
+    padding: 55px;
+    z-index: 10;
+    margin: 0;
+    height: 100%;
+    justify-content: space-between;
+    transition: var(--transition3s);
+  }
+
+  .menu.active {
+    display: flex;
+    right: 0;
+  }
+
+  .black__background.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00000096;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    transition: var(--transition3s);
+  }
+
+  .nav_section div {
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  .nav__contact {
+    justify-content: center;
+  }
+
+  .navResponsive__logo {
+    display: inline-block;
+    margin: 30px 0;
+  }
+
+  .nav__contact {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .nav__sectionItems {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .NavResponsive__social svg {
+    width: 35px;
+  }
+
+  .navResponsive__logo .nav__logo {
+    color: var(--color-Black);
+    padding-left: 10px;
+  }
+
+  .menu .NavResponsive__social {
+    display: flex;
+    justify-content: space-around;
+    bottom: 20px;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+  }
+
+  /*Nav*/
+  .nav_section .div__bars {
+    display: flex;
+    align-items: center;
   }
 
   .navResponsive__bars {
@@ -755,10 +848,12 @@ img.imgGalley.handleHover {
   .contact {
     height: auto;
     padding-top: 25px;
+    background-color: var(--color-Black);
   }
 
   .contact__content {
     flex-direction: column;
+    height: auto;
   }
 
   .contact img {

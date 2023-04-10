@@ -9,7 +9,7 @@ export const movileGallery = () => {
         img.classList.add("activate")
         window.clearInterval()
         setTimeout(() => {
-          img.classList.remove("activate")
+          img.classList.add("activate")
         }, 3000)
       })
     })
