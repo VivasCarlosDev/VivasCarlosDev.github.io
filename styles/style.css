@@ -714,6 +714,7 @@ img.imgGalley.handleHover {
   .nav_section div {
     height: 100%;
     align-items: flex-start;
+    gap: 35px;
     justify-content: space-evenly;
   }
 
@@ -723,7 +724,7 @@ img.imgGalley.handleHover {
 
   .navResponsive__logo {
     display: inline-block;
-    margin: 30px 0;
+    margin-top: 30px;
   }
 
   .nav__contact {
@@ -778,6 +779,10 @@ img.imgGalley.handleHover {
 
   .header__section div {
     text-align: center;
+  }
+
+  .scroll-down {
+    bottom: 8%;
   }
 
   /***** Section Opctions *****/
@@ -907,6 +912,10 @@ img.imgGalley.handleHover {
   .section__footer h4 {
     padding: 5px 15px;
     border-bottom: 1px solid #979797;
+  }
+
+  .header__section {
+    height: calc(100% - 10rem);
   }
 }
 
