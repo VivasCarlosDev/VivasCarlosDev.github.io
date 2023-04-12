@@ -14,6 +14,7 @@ function handleClick_bars() {
   const menusection = document.querySelector(".menu")
   const menuBackground = document.querySelector(".black__background")
   const itemsNav = document.querySelectorAll(".nav__items")
+  const closeNav = document.getElementById("closeNav")
 
   const handleTogle = () => {
     menusection.classList.toggle("active");
@@ -22,6 +23,7 @@ function handleClick_bars() {
 
   menuBars.addEventListener('click', () => handleTogle());
   menuBackground.addEventListener('click', () => handleTogle());
+  closeNav.addEventListener('click', () => handleTogle());
 
   itemsNav.forEach(itemNav => {
     itemNav.addEventListener('click', () => handleTogle())

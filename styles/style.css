@@ -684,7 +684,7 @@ img.imgGalley.handleHover {
     height: 100vh;
     top: 0;
     right: -325px;
-    padding: 55px;
+    padding: 55px 55px 55px 65px;
     z-index: 10;
     margin: 0;
     height: 100%;
@@ -756,6 +756,18 @@ img.imgGalley.handleHover {
   .nav_section .div__bars {
     display: flex;
     align-items: center;
+  }
+
+  .menu .div__bars {
+    background-color: rgba(209, 209, 209, 0.342);
+    position: absolute;
+    top: 0;
+    left: -10px;
+
+  }
+
+  .menu .div__bars .navResponsive__bars {
+    height: 100%;
   }
 
   .navResponsive__bars {
