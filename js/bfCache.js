@@ -8,7 +8,7 @@ if (window.performance && window.performance.navigation.type === 2) {
 }
 
 // Paso 2: Almacenar el estado de la página
-window.addEventListener('beforeunload', function () {
+window.addEventListener('beforeunload', function (event) {
   history.replaceState({ scrollPosition: window.scrollY }, '');
 });
 

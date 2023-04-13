@@ -253,6 +253,8 @@ form {
 }
 
 .form__input {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
   width: 100%;
   background-color: none;
   color: #000000;
@@ -294,6 +296,7 @@ form {
   bottom: 7px;
 }
 
+
 /*** info ***/
 
 .info_section {
@@ -327,10 +330,11 @@ form {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  height: 44px;
 }
 
 .btn__msg svg {
-  width: 30px;
+  width: 26px;
 }
 
 /***** Footer *****/
@@ -403,7 +407,7 @@ form {
     height: 100vh;
     top: 0;
     right: -325px;
-    padding: 55px 55px 55px 65px;
+    padding: 55px 40px 55px 70px;
     z-index: 10;
     margin: 0;
     height: 100%;
@@ -511,12 +515,13 @@ form {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    text-align: center;
   }
 
   .info_section {
     justify-content: center;
-    margin-top: 20px;
-    padding: 50px 0;
+    margin-top: 30px;
+    padding: 70px 0;
   }
 
   /***** Footer *****/

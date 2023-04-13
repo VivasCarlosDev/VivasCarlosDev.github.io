@@ -684,7 +684,7 @@ img.imgGalley.handleHover {
     height: 100vh;
     top: 0;
     right: -325px;
-    padding: 55px 55px 55px 65px;
+    padding: 55px 40px 55px 70px;
     z-index: 10;
     margin: 0;
     height: 100%;

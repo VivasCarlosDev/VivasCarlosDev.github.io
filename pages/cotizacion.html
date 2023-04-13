@@ -91,7 +91,7 @@
       <div class="div__form">
         <h2>Cuéntanos tu idea:</h2>
         <p>¿Necesitas ayuda? Contáctanos ahora mismo y te brindaremos la mejor solución posible.</p>
-        <form action="" method="post">
+        <form id="form" method="post">
           <div class="input__grups">
             <input class="form__input" type="text" name="nombre" id="nombre" placeholder=" ">
             <label class="form__label" for="nombre">Nombre:</label>
@@ -112,7 +112,7 @@
             <label class="form__label" for="mensaje">Mensaje</label>
             <span class="form__line textarea"></span>
           </div>
-          <button class="form__button">Enviar</button>
+          <button class="form__button" type="submit" id="button">Enviar</button>
         </form>
       </div>
       <div class="info_section">
@@ -178,6 +178,12 @@
   </footer>
   <script src="../js/cotiacionMain.js" type="module"></script>
   <script src="../js/bfCache.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init('scU1Ea3pGbXtBrby4')
+  </script>
+  <script src="../js/form.js"></script>
+  </script>
 </body>
 
 </html>
