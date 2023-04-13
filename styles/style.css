@@ -646,7 +646,7 @@ img.imgGalley.handleHover {
     width: auto;
   }
 
-  .nav__contact>a {
+  .nav__contact>.nav__Number {
     display: none;
   }
 

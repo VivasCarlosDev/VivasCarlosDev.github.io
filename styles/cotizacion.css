@@ -28,7 +28,7 @@ h1 {
 h2 {
   font-size: 28px;
   font-weight: 600;
-
+  padding-top: 30px;
 }
 
 h3 {
@@ -50,6 +50,7 @@ nav {
   color: var(--color-White);
   z-index: 2;
   background-color: var(--color-Black);
+  transition: all .4s ease;
 }
 
 nav .nav__button {
@@ -72,7 +73,7 @@ li {
 }
 
 .logo>span {
-  color: var(--color-Blue);
+  color: #6078ff;
 }
 
 button {
@@ -207,13 +208,11 @@ button {
   position: relative;
   top: 88px;
   width: 100%;
-  height: calc(100vh - 88px);
 }
 
 .section__cotizacion {
   display: flex;
-  height: 100%;
-  align-items: center;
+  min-height: 100%;
 }
 
 /*** form ***/
@@ -222,7 +221,6 @@ button {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .div__form p {
@@ -232,6 +230,7 @@ button {
 .form__button {
   width: 220px;
   margin: 0 auto;
+  margin-bottom: 25px;
 }
 
 form {
@@ -261,11 +260,11 @@ form {
   font-size: 18px;
   border: none;
   outline: none;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #00000042;
 }
 
 .form__label {
-  color: #000000;
+  color: #474747;
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -288,9 +287,8 @@ form {
 
 .form__input:focus~.form__line,
 .form__input:not(:placeholder-shown)~.form__line {
-  transform: .4s;
+  transform: scale(1);
 }
-
 
 .form__line.textarea {
   bottom: 7px;
@@ -301,11 +299,74 @@ form {
 .info_section {
   background-color: var(--color-Blue);
   color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
 }
 
-.info_section button {
-  background-color: #14DE4D;
+.content__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
 }
+
+.info__h3 {
+  padding: 0 5%;
+}
+
+.info__h3 span {
+  font-size: 18px;
+}
+
+.btn__msg {
+  color: var(--color-Black);
+  background-color: #14DE4D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn__msg svg {
+  width: 30px;
+}
+
+/***** Footer *****/
+
+.section__footer {
+  position: relative;
+  bottom: -88px;
+  background-color: var(--color-Black);
+  color: var(--color-White);
+}
+
+.footer__social svg {
+  width: 25px;
+}
+
+.section__footer .logo>span {
+  color: #6078ff;
+}
+
+.section__footer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 86px;
+}
+
+.section__footer h4 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 25px;
+}
+
 
 
 
@@ -315,7 +376,7 @@ form {
     width: auto;
   }
 
-  .nav__contact>a {
+  .nav__contact>.nav__Number {
     display: none;
   }
 
@@ -442,6 +503,50 @@ form {
 
   .navResponsive__bars:hover {
     background-color: #ffffff25;
+  }
+
+  /***** *****/
+
+  .section__cotizacion {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .info_section {
+    justify-content: center;
+    margin-top: 20px;
+    padding: 50px 0;
+  }
+
+  /***** Footer *****/
+
+  .footer__Text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .section__footer>div {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section__footer h4 {
+    padding: 5px 15px;
+    border-bottom: 1px solid #979797;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .WebDeveloper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
   }
 
 }
